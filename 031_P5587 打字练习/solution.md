@@ -68,3 +68,49 @@ EOF
 对于 $20\%$ 的数据，不存在换行键。  
 对于 $40\%$ 的数据，不存在退格键。  
 对于 $100\%$ 的数据，$T \leq 10^3$，保证每个文本段的总字符数（包括换行）不超过 $10^5$ 个且总行数不超过 $10^4$。
+
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+vector<string> _sample, input;
+int cnt, s;
+
+string Modify(const string& s) {
+    string res;
+    for (auto c : s) {
+        if (c == '<') {
+            if (!res.empty()) res.pop_back();
+        }
+        else {
+            res.push_back(c);
+        }
+    }
+    return res;
+}
+
+int main() {
+    string line;
+    while (getline(cin, line) && line != "EOF") {
+        _sample.push_back(line);
+    }
+    while (getline(cin, line) && line != "EOF") {
+        input.push_back(line);    
+    }
+    cin >> s;
+    size_t n = min(_sample.size(), input.size());
+    for (size_t i = 0; i < n; ++i) {
+        string s1 = Modify(_sample[i]);
+        string s2 = Modify(input[i]);
+        size_t len = min(s1.size(), s2.size());
+        for (size_t j = 0; j < len; ++j) {
+            if (s1[j] == s2[j]) ++cnt;
+        }
+    }
+    
+    // int re = (cnt * s + 30) / 60;(错误)
+    int re = (cnt * 60 + s / 2) / s;
+    cout << re;
+    return 0;
+} 
+```
+
