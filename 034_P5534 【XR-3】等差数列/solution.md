@@ -57,7 +57,17 @@
 
 这个等差数列为 `1 2 3`，其各项之和为 $6$。
 
-```
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+long long a1, a2, n, ret;
 
+int main() {
+    cin >> a1 >> a2 >> n;
+    long long d = a2 - a1;
+    ret = n * a1 + n * (n - 1) * d / 2;
+    cout << ret;
+    return 0;
+}
 ```
 
