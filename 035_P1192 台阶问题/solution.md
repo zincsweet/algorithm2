@@ -33,6 +33,6 @@
 - 对于 $100\%$ 的数据，$1\leq N\leq10^5$，$1\leq K\leq100$。
 
 ```
-#include
+#include<bits.stdc++.>
 ```
 
