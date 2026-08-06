@@ -37,7 +37,3 @@
 using namespace std;
 ```
 
-```
-
-```
-
