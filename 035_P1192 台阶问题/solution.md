@@ -32,7 +32,24 @@
 - 对于 $40\%$ 的数据，$1\leq N\leq1000$；
 - 对于 $100\%$ 的数据，$1\leq N\leq10^5$，$1\leq K\leq100$。
 
-```
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+int n, k, arr[100010];
 
+int main() {
+    cin >> n >> k;
+    arr[0] = arr[1] = 1;
+    for (int i = 2; i <= n; ++i) {
+        if (i <= k) {
+            arr[i] = arr[i-1] * 2 % 100003;
+        }
+        else {
+            arr[i] = (arr[i-1] * 2 - arr[i-1-k]) % 100003;
+        }
+    }
+    cout << (arr[n]+100003)%100003;
+    return 0;
+}
 ```
 
