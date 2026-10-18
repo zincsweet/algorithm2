@@ -51,5 +51,6 @@ NOIP 2001 提高组第二题
 ```
 #include<bits/stdc++.h>
 using namesapce std;
+
 ```
 
