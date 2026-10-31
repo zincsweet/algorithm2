@@ -197,7 +197,6 @@ bool cmp(const Student& a, const Student& b) {
     if (a.chinese != b.chinese) return a.chinese > b.chinese; // 语文降序
     return a.id < b.id;                                     // 学号升序
 }
-
 int main() {
     int n;
     cin >> n;
