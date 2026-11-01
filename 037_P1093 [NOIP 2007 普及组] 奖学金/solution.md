@@ -213,6 +213,7 @@ int main() {
     for (int i = 0; i < 5; ++i) {
         cout << stu[i].id << ' ' << stu[i].total << '\n';
     }
+    
     return 0;
 }
 ```
