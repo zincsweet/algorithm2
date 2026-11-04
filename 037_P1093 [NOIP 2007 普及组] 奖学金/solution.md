@@ -207,7 +207,6 @@ int main() {
         cin >> stu[i].chinese >> stu[i].math >> stu[i].english;
         stu[i].total = stu[i].chinese + stu[i].math + stu[i].english;
     }
-    
     sort(stu.begin(), stu.end(), cmp);
     
     for (int i = 0; i < 5; ++i) {
