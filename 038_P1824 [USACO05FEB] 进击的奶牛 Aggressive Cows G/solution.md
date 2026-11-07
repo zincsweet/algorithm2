@@ -64,6 +64,7 @@ int main() {
     for (int i = 1; i <= n; ++i) {
         cin >> a[i];
     }
+    
     sort(a + 1, a + 1 + n);
     int left = 0, right = a[n] - a[1];
     while (left < right) {
