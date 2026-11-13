@@ -72,7 +72,6 @@ int main() {
         ans += cur;
         pq.push(cur);
     }
-    
     cout << ans;
     return 0;
 }
